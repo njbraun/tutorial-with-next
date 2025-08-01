@@ -1,3 +1,30 @@
+/* CSS Variables for light/dark theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Automatically switch to dark mode based on OS preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #0a0a0a;
+    --text-color: #ffffff;
+  }
+}
+
+/* Apply theme variables to body with higher specificity */
+html body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html body h1, 
+html body h2, 
+html body h3 {
+  color: var(--text-color);
+}
+
 a.btn-primary {
   display: inline-block;
   margin: 0.5rem;

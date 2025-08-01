@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Dino } from "./types";
+import { Dino } from "./types.ts";
 import Link from "next/link";
 
 export default function Home() {
